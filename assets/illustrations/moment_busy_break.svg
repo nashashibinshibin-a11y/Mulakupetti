@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="100%" height="100%">
+          
+          <!-- 4 PM Busy Day Break -->
+          <rect width="400" height="280" rx="16" fill="#FFF3D9" />
+          <!-- Table Surface -->
+          <rect y="190" width="400" height="90" fill="#D96B3B" />
+          <rect y="190" width="400" height="12" fill="#BA552A" />
+          <!-- Kerala Tea Glass -->
+          <polygon points="120,130 160,130 152,190 128,190" fill="#F8FAFC" stroke="#17452D" stroke-width="2.5" opacity="0.9" />
+          <polygon points="123,145 157,145 151,185 129,185" fill="#B45309" />
+          <!-- Frothy milk layer on top of tea -->
+          <ellipse cx="140" cy="145" rx="16" ry="4" fill="#FEF3C7" />
+          <!-- Tea Steam swirls -->
+          <path d="M 135 120 Q 130 105 140 95" stroke="#D96B3B" stroke-width="2.5" stroke-linecap="round" fill="none" />
+          <path d="M 148 122 Q 155 108 145 92" stroke="#D96B3B" stroke-width="2" stroke-linecap="round" fill="none" />
+          <!-- Banana leaf coaster with golden laddu -->
+          <ellipse cx="260" cy="190" rx="55" ry="18" fill="#3D9B63" stroke="#17452D" stroke-width="2" />
+          <!-- Golden Laddu with Cashew -->
+          <circle cx="260" cy="165" r="26" fill="#FFC857" stroke="#D97706" stroke-width="3" />
+          <ellipse cx="255" cy="158" rx="6" ry="3" fill="#FFFBEB" />
+          <circle cx="270" cy="170" r="3" fill="#65A30D" />
+          <!-- Laptop / notebook in background -->
+          <rect x="290" y="110" width="90" height="75" rx="6" fill="#17452D" stroke="#0D2E1D" stroke-width="2" />
+          <rect x="296" y="116" width="78" height="55" rx="3" fill="#A8D9E8" />
+          <!-- Sparkles -->
+          <polygon points="220,135 222,140 227,140 223,143 225,148 220,145 216,148 217,143 214,140 219,140" fill="#FFC857" stroke="#17452D" stroke-width="1" />
+        
+        </svg>

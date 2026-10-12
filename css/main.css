@@ -1,0 +1,1130 @@
+/* ==========================================================================
+   MULAKUPETTI — Homepage Hero Stylesheet
+   Faithful recreation of the official hero reference concept
+   ========================================================================== */
+
+:root {
+  /* Brand Color Palette sampled directly from reference image */
+  --color-cream: #F7E9CB;
+  --color-cream-soft: #F9EED6;
+  --color-cream-light: #FDF7EA;
+  --color-forest: #173F2E;
+  --color-forest-dark: #0E291E;
+  --color-forest-hover: #1E4E3A;
+  --color-terracotta: #B75C35;
+  --color-terracotta-hover: #9E4A26;
+  --color-olive: #777D4B;
+  --color-brown: #765038;
+  --color-text-main: #173F2E;
+  --color-text-body: #2F4538;
+  --color-text-feature-sub: #2D3F2E;
+  
+  /* Feature Badge Circle Backgrounds */
+  --badge-leaf-bg: #BEC6A8;
+  --badge-jaggery-bg: #E8CCA9;
+  --badge-nuts-bg: #BEC6A8;
+
+  /* Typography */
+  --font-serif: 'Newsreader', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing */
+  --page-padding-x: clamp(24px, 5.5vw, 72px);
+}
+
+/* Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-cream);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+/* ==========================================================================
+   Hero Container & Background Illustration
+   ========================================================================== */
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-cream);
+  background-image: url('../Hero%20image/Malabar%20Veranda%20by%20the%20Backwaters.png');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.site-header {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  padding: clamp(22px, 3.2vw, 36px) var(--page-padding-x) 10px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+.brand-logo-link:hover {
+  opacity: 0.9;
+}
+
+.brand-logo-img {
+  height: clamp(38px, 4.2vw, 44px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Center Navigation: placed in the open sky area */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin-left: clamp(36px, 5.5vw, 84px);
+  margin-right: auto;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 2.8vw, 38px);
+  list-style: none;
+}
+
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: clamp(0.92rem, 1vw, 1rem);
+  font-weight: 500;
+  color: var(--color-forest);
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+  padding: 4px 0;
+}
+
+.nav-link:hover {
+  color: var(--color-terracotta);
+}
+
+/* Header Right Action Icons (White on desktop to contrast with dark foliage) */
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 1.8vw, 24px);
+  flex-shrink: 0;
+}
+
+.action-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transition: color 0.2s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.action-icon-btn:hover {
+  color: #F7E9CB;
+  transform: translateY(-1px);
+}
+
+.cart-icon-btn {
+  position: relative;
+}
+
+/* Terracotta Shopping Bag Badge */
+.cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  background-color: var(--color-terracotta);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: none;
+}
+
+/* Mobile Menu Toggle (hidden on desktop) */
+.mobile-menu-btn {
+  display: none;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   Hero Main Content (Left Column)
+   ========================================================================== */
+.hero-main {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(16px, 2.5vw, 32px) var(--page-padding-x) clamp(24px, 3.8vw, 44px);
+}
+
+.hero-text-container {
+  max-width: clamp(380px, 36vw, 460px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Eyebrow */
+.hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: clamp(0.74rem, 0.86vw, 0.84rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: clamp(14px, 1.8vw, 18px);
+}
+
+/* Main Headline */
+.hero-headline {
+  font-family: var(--font-serif);
+  font-variation-settings: 'opsz' 72;
+  font-size: clamp(2.8rem, 4.3vw, 4.05rem);
+  font-weight: 600;
+  line-height: 1.08;
+  color: var(--color-forest);
+  letter-spacing: -0.018em;
+  margin-bottom: clamp(18px, 2.2vw, 24px);
+}
+
+/* Supporting Paragraph */
+.hero-description {
+  font-family: var(--font-sans);
+  font-size: clamp(0.92rem, 1.05vw, 1.02rem);
+  font-weight: 400;
+  line-height: 1.58;
+  color: var(--color-text-body);
+  max-width: 410px;
+  margin-bottom: clamp(26px, 3.2vw, 34px);
+}
+
+/* CTA Group */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 28px);
+  margin-bottom: clamp(40px, 5.5vw, 64px);
+}
+
+/* Primary Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-forest);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: clamp(0.9rem, 0.98vw, 0.98rem);
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-forest);
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(23, 63, 46, 0.18);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-forest-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(23, 63, 46, 0.26);
+}
+
+.btn-arrow {
+  display: inline-block;
+  font-size: 1.05rem;
+  transition: transform 0.22s ease;
+}
+
+.btn-primary:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+/* Secondary Link */
+.hero-secondary-link {
+  font-family: var(--font-sans);
+  font-size: clamp(0.92rem, 1vw, 1rem);
+  font-weight: 600;
+  color: var(--color-forest);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.hero-secondary-link:hover {
+  color: var(--color-terracotta);
+}
+
+/* ==========================================================================
+   Bottom Features Row (Three Highlights in One Single Row)
+   ========================================================================== */
+.hero-features {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: clamp(18px, 2.4vw, 36px);
+  width: max-content;
+  max-width: 650px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.feature-icon-circle {
+  width: clamp(36px, 3.2vw, 40px);
+  height: clamp(36px, 3.2vw, 40px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.feature-item:hover .feature-icon-circle {
+  transform: scale(1.06);
+}
+
+.feature-icon-leaf {
+  background-color: var(--badge-leaf-bg);
+  color: var(--color-forest);
+}
+
+.feature-icon-jaggery {
+  background-color: var(--badge-jaggery-bg);
+  color: var(--color-brown);
+}
+
+.feature-icon-nuts {
+  background-color: var(--badge-nuts-bg);
+  color: var(--color-forest);
+}
+
+.feature-text-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title {
+  font-family: var(--font-sans);
+  font-size: clamp(0.66rem, 0.74vw, 0.76rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brown);
+  line-height: 1.25;
+}
+
+.feature-subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(0.64rem, 0.7vw, 0.72rem);
+  font-weight: 500;
+  color: var(--color-text-feature-sub);
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+/* Tablet screens (769px to 1080px) */
+@media (max-width: 1080px) {
+  .hero-wrapper {
+    background-position: right 25% center;
+  }
+  .nav-menu {
+    margin-left: 24px;
+  }
+  .nav-list {
+    gap: 18px;
+  }
+  .hero-text-container {
+    max-width: 440px;
+    background: linear-gradient(to right, rgba(247, 233, 203, 0.85) 0%, rgba(247, 233, 203, 0.6) 75%, transparent 100%);
+    padding: 20px;
+    border-radius: 16px;
+  }
+  .hero-features {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+/* Mobile screens (< 768px) */
+@media (max-width: 768px) {
+  .hero-wrapper {
+    min-height: auto;
+    background-image: none;
+    background-color: var(--color-cream);
+  }
+
+  .site-header {
+    padding-bottom: 16px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: var(--page-padding-x);
+    right: var(--page-padding-x);
+    background: var(--color-cream-soft);
+    border: 2px solid var(--color-forest);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+    margin-left: 0;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .action-icon-btn {
+    color: var(--color-forest);
+    filter: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    color: var(--color-forest);
+  }
+
+  .hero-main {
+    padding-top: 16px;
+    padding-bottom: 28px;
+  }
+
+  .hero-text-container {
+    max-width: 100%;
+    background: none;
+    padding: 0;
+  }
+
+  .hero-headline {
+    font-size: 2.35rem;
+  }
+
+  .hero-cta-group {
+    margin-bottom: 30px;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  /* Display the full illustration below text on mobile so laddus remain hero */
+  .hero-mobile-visual {
+    display: block;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 16px;
+    border: 2px solid rgba(23, 63, 46, 0.15);
+  }
+
+  .hero-mobile-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero-mobile-visual {
+    display: none;
+  }
+}
+
+/* Accessibility: focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   MULAKUPETTI — "Meet Our Laddu" Section Styles
+   ========================================================================== */
+
+.meet-laddu-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #F8EBD0;
+  background-image: url('../meet%20the%20laddu%20image/Tropical%20Laddu%20Poster%20Frame.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding: clamp(54px, 6.5vw, 88px) var(--page-padding-x) clamp(64px, 8vw, 110px);
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.meet-laddu-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Header Text Area */
+.meet-laddu-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 680px;
+  margin-bottom: clamp(24px, 3.2vw, 40px);
+}
+
+/* Eyebrow with flanking fine rules */
+.meet-laddu-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-sans);
+  font-size: clamp(0.72rem, 0.8vw, 0.82rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: 12px;
+}
+
+.eyebrow-line {
+  display: inline-block;
+  width: clamp(24px, 3vw, 42px);
+  height: 1px;
+  background-color: var(--color-terracotta);
+  opacity: 0.75;
+}
+
+/* Headline */
+.meet-laddu-headline {
+  font-family: var(--font-serif);
+  font-variation-settings: 'opsz' 72;
+  font-size: clamp(2.9rem, 4.3vw, 4.25rem);
+  font-weight: 600;
+  line-height: 1.08;
+  color: var(--color-forest);
+  letter-spacing: -0.018em;
+  margin-bottom: 6px;
+}
+
+.headline-dot {
+  color: var(--color-terracotta);
+}
+
+/* Subtitle */
+.meet-laddu-subtitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 1.55vw, 1.52rem);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-terracotta);
+  margin-bottom: 14px;
+}
+
+/* Description */
+.meet-laddu-description {
+  font-family: var(--font-sans);
+  font-size: clamp(0.92rem, 1.02vw, 1.02rem);
+  font-weight: 400;
+  line-height: 1.62;
+  color: var(--color-text-body);
+  max-width: 520px;
+  margin-bottom: 14px;
+}
+
+/* Flourish botanical icon */
+.meet-laddu-flourish {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+/* Instruction and Tap Icon */
+.meet-laddu-instruction-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.meet-laddu-instruction {
+  font-family: var(--font-sans);
+  font-size: clamp(0.88rem, 0.96vw, 0.98rem);
+  font-weight: 600;
+  color: var(--color-forest);
+  letter-spacing: 0.01em;
+  transition: color 0.3s ease;
+}
+
+.meet-laddu-tap-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: tap-subtle-bounce 1.9s infinite ease-in-out;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes tap-subtle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* Interactive Laddu Display Area */
+.laddu-display-area {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Laddu Stage */
+.laddu-stage {
+  position: relative;
+  width: clamp(280px, 31vw, 420px);
+  height: clamp(280px, 31vw, 420px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Interactive Trigger Button */
+.laddu-interactive-btn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50%;
+  display: block;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.laddu-interactive-btn:focus-visible {
+  outline: 3px solid var(--color-terracotta);
+  outline-offset: 6px;
+}
+
+/* Frames Wrapper */
+.laddu-frames-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.laddu-stage:not(.is-exploding):not(.is-revealed) .laddu-interactive-btn:hover .laddu-frames-wrapper {
+  transform: scale(1.03);
+}
+
+.laddu-stage.is-anticipating .laddu-frames-wrapper {
+  transform: scale(1.06);
+  transition: transform 0.12s ease-out;
+}
+
+/* Radiating Burst Accents */
+.laddu-burst-accents {
+  position: absolute;
+  inset: -22px;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.4s ease;
+  z-index: 5;
+}
+
+.laddu-stage:not(.is-exploding):not(.is-revealed) .laddu-burst-accents {
+  animation: burst-subtle-pulse 3s infinite ease-in-out;
+}
+
+@keyframes burst-subtle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+.laddu-stage.is-exploding .laddu-burst-accents,
+.laddu-stage.is-revealed .laddu-burst-accents {
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+.burst-cluster {
+  position: absolute;
+  display: flex;
+  gap: 4px;
+}
+
+.burst-cluster span {
+  display: block;
+  background-color: var(--color-terracotta);
+  border-radius: 2px;
+}
+
+/* Position and angles of burst dashes */
+.burst-tl {
+  top: 10%;
+  left: 8%;
+  transform: rotate(-35deg);
+}
+.burst-tl span:nth-child(1) { width: 14px; height: 2.5px; }
+.burst-tl span:nth-child(2) { width: 11px; height: 2.5px; margin-top: 4px; }
+
+.burst-tr {
+  top: 10%;
+  right: 8%;
+  transform: rotate(35deg);
+}
+.burst-tr span:nth-child(1) { width: 11px; height: 2.5px; margin-top: 4px; }
+.burst-tr span:nth-child(2) { width: 14px; height: 2.5px; }
+
+.burst-ml {
+  top: 48%;
+  left: 2%;
+  transform: rotate(-10deg);
+}
+.burst-ml span:nth-child(1) { width: 15px; height: 2.5px; }
+.burst-ml span:nth-child(2) { width: 12px; height: 2.5px; margin-top: 4px; }
+
+.burst-mr {
+  top: 48%;
+  right: 2%;
+  transform: rotate(10deg);
+}
+.burst-mr span:nth-child(1) { width: 12px; height: 2.5px; margin-top: 4px; }
+.burst-mr span:nth-child(2) { width: 15px; height: 2.5px; }
+
+.burst-bl {
+  bottom: 14%;
+  left: 6%;
+  transform: rotate(30deg);
+}
+.burst-bl span:nth-child(1) { width: 14px; height: 2.5px; }
+.burst-bl span:nth-child(2) { width: 11px; height: 2.5px; margin-top: 4px; }
+
+.burst-br {
+  bottom: 14%;
+  right: 6%;
+  transform: rotate(-30deg);
+}
+.burst-br span:nth-child(1) { width: 11px; height: 2.5px; margin-top: 4px; }
+.burst-br span:nth-child(2) { width: 14px; height: 2.5px; }
+
+/* The 4 Animation Frames */
+.laddu-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.laddu-frame.is-active {
+  opacity: 1;
+}
+
+.laddu-frame-1 {
+  transform: scale(1);
+}
+
+.laddu-frame-2 {
+  transform: scale(1.04);
+}
+
+.laddu-frame-3 {
+  transform: scale(1.08);
+}
+
+.laddu-frame-4 {
+  transform: scale(1.12);
+}
+
+/* Connectors SVG */
+.laddu-connectors-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 12;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.laddu-display-area.is-revealed .laddu-connectors-svg,
+.laddu-stage.is-revealed ~ .laddu-connectors-svg {
+  opacity: 1;
+}
+
+.connector-line {
+  fill: none;
+  stroke: var(--color-terracotta);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  transition: stroke-dashoffset 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.laddu-display-area.is-revealed .connector-line {
+  stroke-dashoffset: 0;
+}
+
+.connector-dot {
+  fill: var(--color-terracotta);
+  stroke: #FFF7ED;
+  stroke-width: 1.5px;
+  opacity: 0;
+  transform-origin: center;
+  transition: opacity 0.3s ease 0.45s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s;
+  transform: scale(0.4);
+}
+
+.laddu-display-area.is-revealed .connector-dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Three-column layout for flanking cards */
+.ingredient-col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 6vw, 90px);
+  z-index: 20;
+  width: clamp(200px, 22vw, 240px);
+  flex-shrink: 0;
+}
+
+.col-left {
+  align-items: flex-end;
+}
+
+.col-right {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+
+.ingredient-card {
+  position: relative;
+  background: rgba(254, 250, 241, 0.95);
+  border: 1px solid rgba(183, 92, 53, 0.32);
+  border-radius: 12px;
+  padding: 10px 16px;
+  box-shadow: 0 10px 26px rgba(23, 63, 46, 0.08), 0 2px 6px rgba(183, 92, 53, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(12px) scale(0.95);
+  transition: opacity 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  width: 100%;
+  max-width: 220px;
+}
+
+.laddu-display-area.is-revealed .card-nuts {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.15s;
+}
+
+.laddu-display-area.is-revealed .card-jaggery {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.25s;
+}
+
+.laddu-display-area.is-revealed .card-seeds {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.35s;
+}
+
+.card-tag {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--color-terracotta);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-forest);
+  line-height: 1.15;
+}
+
+.card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.73rem;
+  font-weight: 500;
+  color: var(--color-text-body);
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+/* Replay Button */
+.replay-laddu-btn {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-forest);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-forest);
+  box-shadow: 0 4px 14px rgba(23, 63, 46, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
+  z-index: 25;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.laddu-display-area.is-revealed .replay-laddu-btn,
+.laddu-stage.is-revealed ~ .replay-laddu-btn {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+  transition-delay: 0.4s;
+}
+
+.replay-laddu-btn:hover {
+  background-color: var(--color-forest-dark);
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 6px 18px rgba(23, 63, 46, 0.25);
+}
+
+/* ==========================================================================
+   Responsive Adaptations for Meet Our Laddu Section
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  .ingredient-col {
+    width: clamp(160px, 20vw, 200px);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .meet-laddu-section {
+    padding-top: 48px;
+    padding-bottom: 56px;
+    min-height: auto;
+  }
+
+  .meet-laddu-headline {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .laddu-display-area {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    min-height: auto;
+  }
+
+  .laddu-stage {
+    width: clamp(240px, 70vw, 300px);
+    height: clamp(240px, 70vw, 300px);
+    order: 1;
+    margin: 0 auto;
+  }
+
+  /* Hide connectors on mobile to avoid screen clutter */
+  .laddu-connectors-svg {
+    display: none;
+  }
+
+  .ingredient-col {
+    width: 100%;
+    max-width: 320px;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .col-left {
+    order: 3;
+  }
+
+  .col-right {
+    order: 4;
+    padding-top: 0;
+  }
+
+  .ingredient-card {
+    max-width: 100%;
+    transform: translateY(8px);
+    transition-delay: 0s !important;
+  }
+
+  .laddu-display-area.is-revealed .ingredient-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .replay-laddu-btn {
+    position: static;
+    margin: 16px auto 8px;
+    transform: translateY(6px);
+    order: 2;
+  }
+
+  .laddu-display-area.is-revealed .replay-laddu-btn,
+  .laddu-stage.is-revealed ~ .replay-laddu-btn {
+    transform: translateY(0);
+  }
+}
+
+/* Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce) {
+  .meet-laddu-tap-icon,
+  .laddu-stage:not(.is-exploding):not(.is-revealed) .laddu-burst-accents {
+    animation: none !important;
+  }
+
+  .laddu-frame,
+  .connector-line,
+  .connector-dot,
+  .ingredient-card,
+  .replay-laddu-btn {
+    transition-duration: 0.15s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+

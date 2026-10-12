@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+          <circle cx="60" cy="60" r="54" fill="#FFF3D9" stroke="#17452D" stroke-width="2.5" />
+          
+          <!-- Brass Kindi / Ghee pot -->
+          <path d="M 35 40 Q 60 30 85 40 L 78 85 Q 60 92 42 85 Z" fill="#FFC857" stroke="#D97706" stroke-width="2.5" />
+          <ellipse cx="60" cy="40" rx="25" ry="8" fill="#FDE68A" stroke="#D97706" stroke-width="2" />
+          <ellipse cx="60" cy="40" rx="18" ry="5" fill="#F59E0B" />
+          <!-- Golden Ghee Ribbon Flowing down -->
+          <path d="M 60 42 C 55 60, 50 80, 58 100 C 62 108, 62 115, 60 118" fill="none" stroke="#FFD166" stroke-width="5" stroke-linecap="round" />
+          <circle cx="60" cy="118" r="6" fill="#FFD166" stroke="#D97706" stroke-width="1.5" />
+          <!-- Sparkles -->
+          <circle cx="30" cy="55" r="3" fill="#FFFBEB" />
+          <circle cx="90" cy="65" r="3" fill="#FFFBEB" />
+        
+        </svg>

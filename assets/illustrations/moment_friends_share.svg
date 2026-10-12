@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="100%" height="100%">
+          
+          <!-- Friends Sharing a Snack -->
+          <rect width="400" height="280" rx="16" fill="#FFF3D9" />
+          <!-- Shady Green Background -->
+          <path d="M 0 140 Q 200 90 400 140 L 400 280 L 0 280 Z" fill="#2E7D4E" />
+          <!-- Wooden Bench -->
+          <rect x="40" y="190" width="320" height="18" rx="4" fill="#7A4E2B" stroke="#3D2214" stroke-width="2.5" />
+          <line x1="80" y1="208" x2="80" y2="250" stroke="#3D2214" stroke-width="6" />
+          <line x1="320" y1="208" x2="320" y2="250" stroke="#3D2214" stroke-width="6" />
+          <!-- Appu & Kannan heads together laughing -->
+          <!-- Boy 1 -->
+          <ellipse cx="150" cy="130" rx="28" ry="30" fill="#F0A678" stroke="#17452D" stroke-width="3" />
+          <circle cx="140" cy="125" r="4.5" fill="#17452D" />
+          <path d="M 136 142 Q 148 152 160 142" fill="none" stroke="#800E13" stroke-width="2.5" stroke-linecap="round" />
+          <path d="M 125 125 C 122 100, 135 85, 155 85 C 175 85, 180 100, 178 125 Z" fill="#3D2214" stroke="#17452D" stroke-width="2.5" />
+          <!-- Boy 2 -->
+          <ellipse cx="250" cy="125" rx="30" ry="30" fill="#F0A678" stroke="#17452D" stroke-width="3" />
+          <path d="M 238 120 Q 244 112 250 120" stroke="#17452D" stroke-width="3" fill="none" />
+          <path d="M 256 120 Q 262 112 268 120" stroke="#17452D" stroke-width="3" fill="none" />
+          <path d="M 242 135 Q 254 150 266 135 Z" fill="#800E13" />
+          <path d="M 226 122 C 222 98, 238 82, 258 82 C 278 82, 285 98, 282 122 Z" fill="#2E1C11" stroke="#17452D" stroke-width="2.5" />
+          <!-- Both holding the Laddu between them -->
+          <circle cx="200" cy="175" r="18" fill="#FFC857" stroke="#D97706" stroke-width="2.5" />
+          <circle cx="200" cy="175" r="3" fill="#FFFBEB" />
+          <!-- Sparkles -->
+          <polygon points="200,145 202,150 207,150 203,153 205,158 200,155 196,158 197,153 194,150 199,150" fill="#FFC857" stroke="#17452D" stroke-width="1" />
+        
+        </svg>

@@ -1,0 +1,13 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Test Screenshots
+screenshot_*.png
+meet_laddu_*.png
+meet_laddu_*.jpg
+*.log

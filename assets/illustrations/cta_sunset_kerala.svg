@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sunsetSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7B2D26" />
+      <stop offset="35%" stop-color="#D96B3B" />
+      <stop offset="70%" stop-color="#FFC857" />
+      <stop offset="100%" stop-color="#FFEAA7" />
+    </linearGradient>
+    <linearGradient id="sunsetWater" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E17055" />
+      <stop offset="50%" stop-color="#D63031" />
+      <stop offset="100%" stop-color="#2D3436" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sunset Sky -->
+  <rect width="1000" height="450" rx="20" fill="url(#sunsetSky)" />
+
+  <!-- Giant Golden Setting Sun -->
+  <circle cx="500" cy="220" r="110" fill="#FFF3D9" opacity="0.9" />
+  <circle cx="500" cy="220" r="150" fill="#FFC857" opacity="0.3" />
+
+  <!-- Distant Coconut Palms & Hills Silhouettes -->
+  <path d="M 0 250 Q 250 210 500 240 T 1000 230 L 1000 320 L 0 320 Z" fill="#583723" opacity="0.5" />
+
+  <!-- Backwaters Glowing River -->
+  <path d="M 0 270 Q 300 260 500 275 T 1000 265 L 1000 360 L 0 360 Z" fill="url(#sunsetWater)" opacity="0.85" />
+  <!-- Water Reflection Lines -->
+  <g stroke="#FFF3D9" stroke-width="2.5" opacity="0.6" stroke-linecap="round">
+    <line x1="420" y1="285" x2="580" y2="285" />
+    <line x1="440" y1="300" x2="560" y2="300" />
+    <line x1="460" y1="315" x2="540" y2="315" />
+    <line x1="480" y1="330" x2="520" y2="330" />
+  </g>
+
+  <!-- Foreground Shore with Coconut Trees Silhouettes -->
+  <path d="M 0 330 Q 300 310 600 330 T 1000 320 L 1000 450 L 0 450 Z" fill="#17452D" />
+
+  <!-- Left Coconut Tree Silhouette -->
+  <path d="M 90 450 C 95 350 110 250 150 160" stroke="#0D2E1D" stroke-width="16" stroke-linecap="round" fill="none" />
+  <g fill="#0D2E1D">
+    <path d="M 150 160 C 100 120 40 130 0 160 C 40 145 90 145 150 160 Z" />
+    <path d="M 150 160 C 145 90 180 60 215 70 C 195 100 175 130 150 160 Z" />
+    <path d="M 150 160 C 205 125 260 140 290 180 C 240 165 190 165 150 160 Z" />
+  </g>
+
+  <!-- Right Coconut Tree Silhouette -->
+  <path d="M 910 450 C 900 350 885 260 850 170" stroke="#0D2E1D" stroke-width="16" stroke-linecap="round" fill="none" />
+  <g fill="#0D2E1D">
+    <path d="M 850 170 C 890 120 950 125 990 160 C 950 145 900 145 850 170 Z" />
+    <path d="M 850 170 C 840 95 805 65 770 75 C 790 105 815 135 850 170 Z" />
+    <path d="M 850 170 C 795 130 735 145 710 185 C 760 170 810 170 850 170 Z" />
+  </g>
+
+  <!-- The LADDU Brand Box in the Center Foreground with the Kids Cheering! -->
+  <g transform="translate(420, 270)">
+    <!-- Cheerful Trio Silhouettes / Stylized Figures Cheering -->
+    <!-- Appu waving -->
+    <circle cx="-40" cy="20" r="18" fill="#FFC857" stroke="#17452D" stroke-width="2" />
+    <path d="M -55 38 L -25 38 L -25 80 L -55 80 Z" fill="#D96B3B" stroke="#17452D" stroke-width="2" />
+    <path d="M -55 45 L -75 25" stroke="#F0A678" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Kannan in center holding the golden box -->
+    <circle cx="80" cy="10" r="20" fill="#FFC857" stroke="#17452D" stroke-width="2" />
+    <path d="M 60 30 L 100 30 L 100 80 L 60 80 Z" fill="#A8D9E8" stroke="#17452D" stroke-width="2" />
+
+    <!-- Meenu cheering -->
+    <circle cx="195" cy="22" r="17" fill="#FFC857" stroke="#17452D" stroke-width="2" />
+    <path d="M 180 39 L 210 39 L 215 80 L 175 80 Z" fill="#17452D" stroke="#FFC857" stroke-width="2" />
+    <path d="M 210 45 L 230 25" stroke="#F0A678" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Premium LADDU Box in front -->
+    <g transform="translate(15, 60)">
+      <rect x="0" y="0" width="130" height="85" rx="10" fill="#17452D" stroke="#FFC857" stroke-width="3.5" />
+      <rect x="6" y="6" width="118" height="73" rx="7" fill="#1F5A3B" />
+      <rect x="12" y="12" width="106" height="61" rx="5" fill="#FFF3D9" />
+      <text x="65" y="42" font-family="'Outfit', 'Inter', sans-serif" font-weight="900" font-size="20" fill="#17452D" text-anchor="middle" letter-spacing="2">LADDU</text>
+      <circle cx="65" cy="56" r="8" fill="#FFC857" stroke="#D97706" stroke-width="1.5" />
+      <!-- Golden ribbon bow -->
+      <polygon points="65,-5 55,-18 75,-18" fill="#FFC857" stroke="#D97706" stroke-width="1.5" />
+      <circle cx="65" cy="-5" r="4" fill="#D96B3B" />
+    </g>
+  </g>
+
+  <!-- Stars and sparkles in twilight sky -->
+  <g fill="#FFF3D9" stroke="#FFC857" stroke-width="1">
+    <circle cx="280" cy="80" r="3" />
+    <circle cx="360" cy="110" r="2.5" />
+    <circle cx="680" cy="70" r="3.5" />
+    <circle cx="750" cy="120" r="2" />
+    <circle cx="180" cy="130" r="2" />
+  </g>
+</svg>

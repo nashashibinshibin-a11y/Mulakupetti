@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="100%" height="100%">
+          
+          <!-- Family Moment at Home -->
+          <rect width="400" height="280" rx="16" fill="#FFF3D9" />
+          <!-- Red Oxide Veranda floor -->
+          <rect y="170" width="400" height="110" fill="#B24424" />
+          <!-- Traditional Brass Nilavilakku (Oil Lamp) -->
+          <polygon points="70,140 90,140 85,210 75,210" fill="#FFC857" stroke="#D97706" stroke-width="2" />
+          <ellipse cx="80" cy="140" rx="15" ry="5" fill="#FFD166" />
+          <path d="M 80 135 Q 82 125 80 120 Q 78 125 80 135" fill="#D96B3B" stroke="#9A3412" stroke-width="1.5" />
+          <!-- Muthassi (Grandmother) Hand giving laddu to little child hand -->
+          <!-- Grandmother's arm (traditional gold bangles / kangan) -->
+          <path d="M 360 120 C 300 130 250 150 215 155" stroke="#E59866" stroke-width="14" stroke-linecap="round" fill="none" />
+          <circle cx="280" cy="140" r="5" fill="#FFC857" stroke="#D97706" stroke-width="2" />
+          <!-- Fresh Laddu in hand -->
+          <circle cx="200" cy="155" r="20" fill="#FFC857" stroke="#D97706" stroke-width="2.5" />
+          <circle cx="196" cy="150" r="3" fill="#FFFBEB" />
+          <circle cx="206" cy="160" r="2.5" fill="#65A30D" />
+          <!-- Child's little eager hand reaching up -->
+          <path d="M 110 210 C 140 200 170 180 185 170" stroke="#F0A678" stroke-width="11" stroke-linecap="round" fill="none" />
+          <!-- Floating heart / warmth doodle -->
+          <path d="M 200 115 C 200 105, 185 100, 185 110 C 185 120, 200 130, 200 130 C 200 130, 215 120, 215 110 C 215 100, 200 105, 200 115 Z" fill="#D96B3B" />
+        
+        </svg>

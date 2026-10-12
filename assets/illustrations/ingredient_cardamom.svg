@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+          <circle cx="60" cy="60" r="54" fill="#FFF3D9" stroke="#17452D" stroke-width="2.5" />
+          
+          <!-- Two green cardamom pods -->
+          <ellipse cx="50" cy="65" rx="24" ry="14" fill="#65A30D" stroke="#365314" stroke-width="2.5" transform="rotate(-30 50 65)" />
+          <path d="M 30 50 Q 50 65 70 80" stroke="#4D7C0F" stroke-width="2" fill="none" />
+          <!-- Open pod showing black aromatic seeds -->
+          <ellipse cx="72" cy="55" rx="22" ry="13" fill="#84CC16" stroke="#365314" stroke-width="2.5" transform="rotate(25 72 55)" />
+          <ellipse cx="74" cy="54" rx="14" ry="7" fill="#3D2214" transform="rotate(25 74 54)" />
+          <circle cx="70" cy="52" r="2.5" fill="#17452D" />
+          <circle cx="76" cy="56" r="2" fill="#17452D" />
+          <circle cx="80" cy="52" r="2" fill="#17452D" />
+          <!-- Scent aroma waves -->
+          <path d="M 60 25 Q 70 12 85 20" fill="none" stroke="#65A30D" stroke-width="2" stroke-linecap="round" />
+        
+        </svg>
