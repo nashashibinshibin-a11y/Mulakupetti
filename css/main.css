@@ -41,7 +41,7 @@
 
 html, body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: var(--color-cream);
   color: var(--color-text-main);
   font-family: var(--font-sans);
@@ -411,7 +411,7 @@ button {
   }
   .hero-text-container {
     max-width: 440px;
-    background: linear-gradient(to right, rgba(247, 233, 203, 0.85) 0%, rgba(247, 233, 203, 0.6) 75%, transparent 100%);
+    background: linear-gradient(to right, rgba(247, 233, 203, 0.88) 0%, rgba(247, 233, 203, 0.7) 75%, transparent 100%);
     padding: 20px;
     border-radius: 16px;
   }
@@ -430,7 +430,8 @@ button {
   }
 
   .site-header {
-    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-bottom: 12px;
   }
 
   .nav-menu {
@@ -442,7 +443,7 @@ button {
     background: var(--color-cream-soft);
     border: 2px solid var(--color-forest);
     border-radius: 16px;
-    padding: 20px;
+    padding: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     z-index: 100;
     margin-left: 0;
@@ -455,8 +456,19 @@ button {
   .nav-list {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 4px;
     width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 10px 4px;
+    font-size: 1.02rem;
+    border-bottom: 1px solid rgba(23, 63, 46, 0.08);
+  }
+
+  .nav-list li:last-child .nav-link {
+    border-bottom: none;
   }
 
   .action-icon-btn {
@@ -470,8 +482,8 @@ button {
   }
 
   .hero-main {
-    padding-top: 16px;
-    padding-bottom: 28px;
+    padding-top: 14px;
+    padding-bottom: 24px;
   }
 
   .hero-text-container {
@@ -480,20 +492,35 @@ button {
     padding: 0;
   }
 
+  .hero-eyebrow {
+    font-size: clamp(0.7rem, 2.6vw, 0.78rem);
+    margin-bottom: 12px;
+  }
+
   .hero-headline {
-    font-size: 2.35rem;
+    font-size: clamp(2.1rem, 7.5vw, 2.6rem);
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+
+  .hero-description {
+    font-size: clamp(0.9rem, 3.4vw, 0.98rem);
+    line-height: 1.55;
+    margin-bottom: 24px;
   }
 
   .hero-cta-group {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
   .hero-features {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 14px;
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   /* Display the full illustration below text on mobile so laddus remain hero */
@@ -502,14 +529,60 @@ button {
     width: 100%;
     border-radius: 16px;
     overflow: hidden;
-    margin-top: 16px;
+    margin-top: 14px;
     border: 2px solid rgba(23, 63, 46, 0.15);
+    box-shadow: 0 8px 24px rgba(23, 63, 46, 0.08);
   }
 
   .hero-mobile-visual img {
     width: 100%;
     height: auto;
     display: block;
+  }
+}
+
+/* Extra small mobile screens (<= 480px, including 320px) */
+@media (max-width: 480px) {
+  :root {
+    --page-padding-x: 16px;
+  }
+
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .brand-logo-img {
+    height: 32px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .action-icon-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .action-icon-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .mobile-menu-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-primary {
+    padding: 11px 20px;
+    font-size: 0.9rem;
+  }
+
+  .nav-menu {
+    left: 12px;
+    right: 12px;
+    padding: 14px;
   }
 }
 
@@ -1033,36 +1106,115 @@ button {
    Responsive Adaptations for Meet Our Laddu Section
    ========================================================================== */
 
-@media (max-width: 960px) {
+/* Tablet (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .meet-laddu-section {
+    min-height: auto;
+    padding: 54px var(--page-padding-x) 70px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .laddu-display-area {
+    max-width: 750px;
+    justify-content: space-between;
+  }
+
   .ingredient-col {
-    width: clamp(160px, 20vw, 200px);
-    gap: 30px;
+    width: clamp(160px, 22vw, 190px);
+    gap: 36px;
+  }
+
+  .laddu-stage {
+    width: 290px;
+    height: 290px;
+  }
+
+  .ingredient-card {
+    padding: 10px 14px;
+    max-width: 100%;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-desc {
+    font-size: 0.70rem;
   }
 }
 
+/* Mobile screens (< 768px) */
 @media (max-width: 768px) {
   .meet-laddu-section {
-    padding-top: 48px;
-    padding-bottom: 56px;
+    padding-top: 42px;
+    padding-bottom: 50px;
     min-height: auto;
+    background-size: clamp(520px, 140vw, 760px) auto;
+    background-position: center 85px;
+    background-repeat: no-repeat;
+    background-color: var(--color-cream);
+  }
+
+  .meet-laddu-header {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .meet-laddu-eyebrow {
+    font-size: clamp(0.68rem, 2.6vw, 0.76rem);
+    letter-spacing: 0.14em;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .eyebrow-line {
+    width: clamp(16px, 4vw, 28px);
   }
 
   .meet-laddu-headline {
-    font-size: clamp(2.2rem, 8vw, 3rem);
+    font-size: clamp(2.1rem, 7.5vw, 2.85rem);
+    line-height: 1.12;
+    margin-bottom: 4px;
+  }
+
+  .meet-laddu-subtitle {
+    font-size: clamp(1.1rem, 4vw, 1.35rem);
+    margin-bottom: 10px;
+  }
+
+  .meet-laddu-description {
+    font-size: clamp(0.88rem, 3.4vw, 0.98rem);
+    line-height: 1.55;
+    max-width: 360px;
+    margin-bottom: 10px;
+  }
+
+  .meet-laddu-flourish {
+    margin-bottom: 8px;
+  }
+
+  .meet-laddu-instruction {
+    font-size: clamp(0.86rem, 3.2vw, 0.94rem);
   }
 
   .laddu-display-area {
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
     min-height: auto;
+    width: 100%;
   }
 
   .laddu-stage {
-    width: clamp(240px, 70vw, 300px);
-    height: clamp(240px, 70vw, 300px);
+    width: clamp(230px, 64vw, 280px);
+    height: clamp(230px, 64vw, 280px);
     order: 1;
     margin: 0 auto;
+  }
+
+  .laddu-burst-accents {
+    inset: -14px;
   }
 
   /* Hide connectors on mobile to avoid screen clutter */
@@ -1072,9 +1224,14 @@ button {
 
   .ingredient-col {
     width: 100%;
-    max-width: 320px;
+    max-width: 330px;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+    display: none;
+  }
+
+  .laddu-display-area.is-revealed .ingredient-col {
+    display: flex;
   }
 
   .col-left {
@@ -1088,6 +1245,8 @@ button {
 
   .ingredient-card {
     max-width: 100%;
+    padding: 12px 18px;
+    border-radius: 14px;
     transform: translateY(8px);
     transition-delay: 0s !important;
   }
@@ -1097,11 +1256,26 @@ button {
     transform: translateY(0);
   }
 
+  .card-tag {
+    font-size: 0.62rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-desc {
+    font-size: 0.76rem;
+  }
+
   .replay-laddu-btn {
     position: static;
-    margin: 16px auto 8px;
+    margin: 14px auto 4px;
     transform: translateY(6px);
     order: 2;
+    padding: 11px 22px;
+    font-size: 0.88rem;
+    min-height: 44px;
   }
 
   .laddu-display-area.is-revealed .replay-laddu-btn,
